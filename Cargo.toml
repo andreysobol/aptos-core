@@ -125,6 +125,7 @@ members = [
     "testsuite/testcases",
     "types",
     "vm-validator",
+    "vmwrapper",
 ]
 
 exclude = ["crates/aptos-protos", "ecosystem/sf-indexer"]

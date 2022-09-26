@@ -1,0 +1,44 @@
+[package]
+name = "vmwrapper"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.57"
+aptos-vm = { path = "../aptos-move/aptos-vm" }
+aptos-crypto = { path = "../crates/aptos-crypto" }
+aptos-crypto-derive = { path = "../crates/aptos-crypto-derive" }
+bcs = "0.1.3"
+dashmap = "5.2.0"
+fail = "0.5.0"
+num_cpus = "1.13.1"
+once_cell = "1.10.0"
+rayon = "1.5.2"
+serde = { version = "1.0.137", default-features = false }
+serde_json = "1.0.81"
+smallvec = "1.8.0"
+tracing = "0.1.34"
+
+aptos-aggregator = { path = "../aptos-move/aptos-aggregator" }
+aptos-gas = { path = "../aptos-move/aptos-gas" }
+aptos-logger = { path = "../crates/aptos-logger" }
+aptos-metrics-core = { path = "../crates/aptos-metrics-core" }
+aptos-module-verifier = { path = "../aptos-move/aptos-module-verifier" }
+aptos-parallel-executor = { path = "../aptos-move/parallel-executor" }
+aptos-state-view = { path = "../storage/state-view" }
+aptos-types = { path = "../types" }
+
+framework =  { path = "../aptos-move/framework" }
+move-deps = { path = "../aptos-move/move-deps", features = ["address32", "table-extension"] }
+mvhashmap = { path = "../aptos-move/mvhashmap" }
+
+[dev-dependencies]
+proptest = "1.0.0"
+
+aptos-types = { path = "../types", features = ["fuzzing"] }
+
+[features]
+default = []
+mirai-contracts = []
+fuzzing = ["move-deps/fuzzing", "move-deps/fuzzing", "framework/fuzzing"]
+failpoints = ["fail/failpoints", "move-deps/failpoints"]

@@ -10211,6 +10211,38 @@ dependencies = [
 ]
 
 [[package]]
+name = "vmwrapper"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "aptos-aggregator",
+ "aptos-crypto",
+ "aptos-crypto-derive",
+ "aptos-gas",
+ "aptos-logger",
+ "aptos-metrics-core",
+ "aptos-module-verifier",
+ "aptos-parallel-executor",
+ "aptos-state-view",
+ "aptos-types",
+ "aptos-vm",
+ "bcs",
+ "dashmap",
+ "fail 0.5.0",
+ "framework",
+ "move-deps",
+ "mvhashmap",
+ "num_cpus",
+ "once_cell",
+ "proptest",
+ "rayon",
+ "serde 1.0.144",
+ "serde_json",
+ "smallvec",
+ "tracing",
+]
+
+[[package]]
 name = "wait-timeout"
 version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"

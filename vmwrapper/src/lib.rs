@@ -5,6 +5,8 @@ use aptos_types::{
 };
 use aptos_vm::VMExecutor;
 
+mod block_executor_wrapper;
+
 pub struct ZkSyncWrapperVM;
 
 impl VMExecutor for ZkSyncWrapperVM {

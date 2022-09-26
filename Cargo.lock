@@ -10219,6 +10219,7 @@ dependencies = [
  "aptos-crypto",
  "aptos-crypto-derive",
  "aptos-gas",
+ "aptos-infallible",
  "aptos-logger",
  "aptos-metrics-core",
  "aptos-module-verifier",
@@ -10228,6 +10229,8 @@ dependencies = [
  "aptos-vm",
  "bcs",
  "dashmap",
+ "executor",
+ "executor-types",
  "fail 0.5.0",
  "framework",
  "move-deps",
@@ -10236,9 +10239,11 @@ dependencies = [
  "once_cell",
  "proptest",
  "rayon",
+ "scratchpad",
  "serde 1.0.144",
  "serde_json",
  "smallvec",
+ "storage-interface",
  "tracing",
 ]
 

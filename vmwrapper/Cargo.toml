@@ -32,6 +32,12 @@ framework =  { path = "../aptos-move/framework" }
 move-deps = { path = "../aptos-move/move-deps", features = ["address32", "table-extension"] }
 mvhashmap = { path = "../aptos-move/mvhashmap" }
 
+executor = { path = "../execution/executor" }
+executor-types = { path = "../execution/executor-types" }
+storage-interface = { path = "../storage/storage-interface" }
+scratchpad = { path = "../storage/scratchpad" }
+aptos-infallible = { path = "../crates/aptos-infallible" }
+
 [dev-dependencies]
 proptest = "1.0.0"
 

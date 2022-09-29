@@ -197,6 +197,7 @@ proptest! {
     #![proptest_config(ProptestConfig::with_cases(10))]
 
     #[test]
+    #[ignore]
     fn test_end_to_end(d in test_data_strategy()) {
         test_end_to_end_impl(d)
     }

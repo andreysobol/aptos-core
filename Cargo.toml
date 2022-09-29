@@ -126,6 +126,7 @@ members = [
     "types",
     "vm-validator",
     "vmwrapper",
+    "dummyvm",
 ]
 
 exclude = ["crates/aptos-protos", "ecosystem/sf-indexer"]

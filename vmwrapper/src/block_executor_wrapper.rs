@@ -30,6 +30,8 @@ use executor::{
 };
 use storage_interface::DbReaderWriter;
 
+use crate::http_requests::{execute_block_request, commit_blocks_request};
+
 pub struct BlockExecutor<V> {
     pub db: DbReaderWriter,
     inner: RwLock<Option<BlockExecutorInner<V>>>,
@@ -199,9 +201,15 @@ where
                         "Injected error in vm_execute_block"
                     )))
                 });
-                ChunkOutput::by_transaction_execution::<V>(transactions, state_view)?
+                ChunkOutput::by_transaction_execution::<V>(transactions.clone(), state_view)?
             };
             chunk_output.trace_log_transaction_status();
+
+            execute_block_request(
+                block.0,
+                parent_block_id,
+                transactions.clone(),
+            );
 
             let (output, _, _) = chunk_output.apply_to_ledger(parent_view)?;
             output
@@ -297,6 +305,8 @@ where
         self.block_tree
             .prune(ledger_info_with_sigs.ledger_info())
             .expect("Failure pruning block tree.");
+
+        commit_blocks_request(block_ids);
 
         Ok(())
     }

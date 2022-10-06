@@ -98,7 +98,7 @@ async fn main() -> std::io::Result<()> {
             .service(web::resource("/execute_block").route(web::post().to(execute_block)))
             .service(web::resource("/commit_blocks_ext").route(web::post().to(commit_blocks_ext)))
         })
-    .bind(("127.0.0.1", 8080))?
+    .bind(("127.0.0.1", 8383))?
     .run()
     .await
 }

@@ -18,6 +18,8 @@ serde = { version = "1.0.137", default-features = false }
 serde_json = "1.0.81"
 smallvec = "1.8.0"
 tracing = "0.1.34"
+tokio = { version = "1.21.2", features = ["full"] }
+reqwest = "0.11.12"
 
 aptos-aggregator = { path = "../aptos-move/aptos-aggregator" }
 aptos-gas = { path = "../aptos-move/aptos-gas" }
@@ -42,6 +44,7 @@ aptos-infallible = { path = "../crates/aptos-infallible" }
 proptest = "1.0.0"
 
 aptos-types = { path = "../types", features = ["fuzzing"] }
+
 
 [features]
 default = []

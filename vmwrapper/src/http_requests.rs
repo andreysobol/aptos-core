@@ -7,26 +7,6 @@ use aptos_types::transaction::Transaction;
 
 use tokio::runtime::Runtime;
 
-/*async fn urlget() -> Result<()>{
-    let user = "andreysobol";
-    let request_url = format!("https://api.github.com/users/{}", user);
-    println!("{}", request_url);
-
-    let timeout = Duration::new(20, 0);
-    let client = ClientBuilder::new().timeout(timeout).build()?;
-    let response = client.get(&request_url).send().await?;
-
-    println!("{:?}", response);
-
-    if response.status().is_success() {
-        println!("{} is a user!", user);
-    } else {
-        println!("{} is not a user!", user);
-    }
-
-    Ok(())
-}*/
-
 #[derive(Debug, Serialize, Deserialize)]
 struct CommitBlockRequest {
     block_ids: Vec<HashValue>,

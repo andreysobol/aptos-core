@@ -1,6 +1,4 @@
 use reqwest::Result;
-use std::time::Duration;
-use reqwest::ClientBuilder;
 use serde::{Deserialize, Serialize};
 use aptos_crypto::HashValue;
 use aptos_types::transaction::Transaction;

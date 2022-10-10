@@ -82,10 +82,6 @@ async fn commit_blocks_ext(item: web::Json<CommitBlockRequest>) -> HttpResponse 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
 
-    {
-        let mut un_blocks = BLOCKS.lock().unwrap();
-    }
-
     env_logger::init_from_env(env_logger::Env::new().default_filter_or("info"));
 
     log::info!("starting HTTP server at http://localhost:8080");

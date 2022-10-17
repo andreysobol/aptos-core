@@ -6,7 +6,7 @@ use aptos_types::{
 use aptos_vm::VMExecutor;
 
 mod http_requests;
-mod block_executor_wrapper;
+pub mod block_executor_wrapper;
 
 pub struct ZkSyncWrapperVM;
 

@@ -55,6 +55,7 @@ safety-rules = { path = "safety-rules" }
 schemadb = { path = "../storage/schemadb" }
 short-hex-str = { path = "../crates/short-hex-str" }
 storage-interface = { path = "../storage/storage-interface" }
+vmwrapper = { path = "../vmwrapper" }
 
 [dev-dependencies]
 claims = "0.7"

@@ -18,7 +18,10 @@ use aptos_mempool::QuorumStoreRequest;
 use aptos_vm::AptosVM;
 use consensus_notifications::ConsensusNotificationSender;
 use event_notifications::ReconfigNotificationListener;
-use executor::block_executor::BlockExecutor;
+
+//use executor::block_executor::BlockExecutor;
+use vmwrapper::block_executor_wrapper::BlockExecutor;
+
 use futures::channel::mpsc;
 use network::application::storage::PeerMetadataStorage;
 use std::sync::{
